@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    IMAGE = "YOUR_DOCKERHUB_USERNAME/employee-portal:latest"
+    IMAGE = "shezanmalikcfc/employee-portal:latest"
     DOCKERHUB = credentials('dockerhub-creds')
     APP1_PRIVATE_IP = "10.10.2.73"
     SSH_KEY = "/var/lib/jenkins/.ssh/employee-portal.pem"
@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://github.com/YOUR_GITHUB_USERNAME/Employee-Portal-with-Automated-DevOps-Delivery-Pipeline.git', branch: 'main'
+        git url: 'https://github.com/shezanmalikcfc/Employee-Portal-with-Automated-DevOps-Delivery-Pipeline.git', branch: 'main'
       }
     }
 
